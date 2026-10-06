@@ -1,0 +1,17 @@
+# Not shipped to WordPress.org (10up/action-wordpress-plugin-deploy and scripts/build.sh read this).
+/.wordpress-org
+/.git
+/.gitignore
+/.distignore
+/.github
+/README.md
+/build
+/node_modules
+/tests
+/vendor
+composer.json
+composer.lock
+phpcs.xml.dist
+phpunit.xml.dist
+.phpunit.result.cache
+/scripts

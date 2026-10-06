@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<ruleset name="TerraGaming Media Ads">
+  <description>WordPress Coding Standards for the plugin (tests use PHPUnit conventions).</description>
+  <file>.</file>
+  <exclude-pattern>/vendor/*</exclude-pattern>
+  <exclude-pattern>/tests/*</exclude-pattern>
+  <exclude-pattern>/build/*</exclude-pattern>
+  <arg name="extensions" value="php"/>
+  <arg value="sp"/>
+  <config name="minimum_wp_version" value="6.5"/>
+  <config name="testVersion" value="7.4-"/>
+  <rule ref="WordPress"/>
+  <rule ref="PHPCompatibilityWP"/>
+  <rule ref="WordPress.WP.I18n">
+    <properties>
+      <property name="text_domain" type="array">
+        <element value="terragaming-media-ads"/>
+      </property>
+    </properties>
+  </rule>
+  <rule ref="WordPress.NamingConventions.PrefixAllGlobals">
+    <properties>
+      <property name="prefixes" type="array">
+        <element value="terragaming_ads"/>
+        <element value="TerraGaming_Ads"/>
+      </property>
+    </properties>
+  </rule>
+  <!-- `<script>.asset.php` is the name WordPress looks for next to a block's editor script. -->
+  <rule ref="WordPress.Files.FileName.InvalidClassFileName">
+    <exclude-pattern>/blocks/*/*.asset.php</exclude-pattern>
+  </rule>
+  <rule ref="WordPress.Files.FileName.NotHyphenatedLowercase">
+    <exclude-pattern>/blocks/*/*.asset.php</exclude-pattern>
+  </rule>
+</ruleset>

@@ -1,0 +1,18 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "terragaming-ads/ad-unit",
+  "version": "0.1.0",
+  "title": "TerraGaming Media Ad",
+  "category": "widgets",
+  "icon": "megaphone",
+  "description": "A TerraGaming Media ad unit. Enter the unit ID from the portal (Ad Units & Tags).",
+  "keywords": ["ad", "advert", "terragaming"],
+  "textdomain": "terragaming-media-ads",
+  "attributes": {
+    "unit": { "type": "string", "default": "" }
+  },
+  "supports": { "html": false, "align": ["left", "center", "right", "wide"] },
+  "editorScript": "file:./editor.js",
+  "render": "file:./render.php"
+}
