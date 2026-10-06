@@ -30,7 +30,8 @@ jobs:
       - name: The tag matches the plugin
         env:
           VERSION: ${{ steps.version.outputs.version }}
-        run: grep -qx "Stable tag: $VERSION" readme.txt
+        run: |
+          grep -qx "Stable tag: $VERSION" readme.txt
       - uses: wordpress/plugin-check-action@v1
         with:
           build-dir: build/terragaming-media-ads
